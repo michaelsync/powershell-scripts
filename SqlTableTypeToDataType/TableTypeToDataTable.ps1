@@ -10,7 +10,13 @@ Param
         [GeneratorType]$type = [GeneratorType]::All
 )
 
-. ".\GeneratorType.ps1" 
+enum GeneratorType{
+  DeclarationOnly = 1
+  CreateDataTableOnly = 2
+  PopulateDataRowsOnly = 3
+  All = 4
+}
+#. ".\GeneratorType.ps1" 
 . ".\SqlTableType.ps1" 
 
 write-host [GeneratorType]::All
