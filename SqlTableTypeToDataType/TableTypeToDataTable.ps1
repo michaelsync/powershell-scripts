@@ -34,10 +34,13 @@ if($PSVersionTable.PSVersion.Major -lt 5){
    exit -1 #$host.SetShouldExit(-1)   
 }
 
-write-output $sqltabletype
-write-output $generatedfile
-write-output $type
+write-output "SQL Table Type [Input]: $sqltabletype"
+write-output "Generated File Name [Input]: $generatedfile"
+write-output "Generator Type [Input]: $type"
 
 $tableType  = [SqlTableType]::new($SQLServer, $SQLDBName, $SQLUserName, $SQLUserPassword)
-write-host $tableType.GetColumns($sqlTableType)
+$colums = $tableType.GetColumns($sqlTableType)
 
+#foreach($col in $colums){
+#   
+#}
