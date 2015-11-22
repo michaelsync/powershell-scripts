@@ -16,10 +16,11 @@ enum GeneratorType{
   PopulateDataRowsOnly = 3
   All = 4
 }
+
 #. ".\GeneratorType.ps1" 
 . ".\SqlTableType.ps1" 
+#. ".\SqlTableColumn.ps1" 
 
-write-host [GeneratorType]::All
 
 $SQLServer = "." 
 $SQLDBName = "TestDb"
