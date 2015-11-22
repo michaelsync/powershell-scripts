@@ -10,6 +10,7 @@ Param
         [GeneratorType]$type = [GeneratorType]::All
 )
 
+#Issue 
 enum GeneratorType{
   DeclarationOnly = 1
   CreateDataTableOnly = 2
@@ -18,9 +19,9 @@ enum GeneratorType{
 }
 
 #. ".\GeneratorType.ps1" 
-. ".\SqlTableType.ps1" 
-#. ".\SqlTableColumn.ps1" 
 
+. ".\SqlTableColumn.ps1" 
+. ".\SqlTableType.ps1" 
 
 $SQLServer = "." 
 $SQLDBName = "TestDb"

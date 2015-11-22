@@ -1,0 +1,3 @@
+class CustomClass {
+  [string]$ColumnName
+}
